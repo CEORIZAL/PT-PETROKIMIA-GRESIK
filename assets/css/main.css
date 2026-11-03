@@ -2153,4 +2153,54 @@ section,
   opacity: 1;
   transform: scale(1.2);
 }
+/* Format Deskripsi Perusahaan */
+#about .content {
+  font-family: "Times New Roman", Times, serif;
+}
 
+#about .content p {
+  text-align: justify;
+}
+
+#about .content h2,
+#about .content ul li {
+  font-family: "Times New Roman", Times, serif;
+}
+/* Warna menu navbar */
+#navmenu a {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Warna menu saat diarahkan kursor */
+#navmenu a:hover {
+  color: #ffc451 !important;
+}
+
+/* Warna menu yang sedang aktif */
+#navmenu a.active {
+  color: #ffc451 !important;
+}
+/* Menyamakan ukuran gambar produk */
+.portfolio .portfolio-item > img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Menyamakan tinggi area kartu produk */
+.portfolio .portfolio-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  margin-top: auto;
+}
+.layanan-card {
+  height: fit-content !important;
+  align-self: flex-start;
+}

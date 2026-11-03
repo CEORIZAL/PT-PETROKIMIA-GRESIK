@@ -47,22 +47,22 @@
 
     <!-- Logo Perusahaan -->
     <a href="index.html" class="logo d-flex align-items-center me-auto">
-      <img src="assets/img/logo.png"
+      <img src="assets/img/PT Petrokimia Gresik Logo.png"
            alt="Logo Petrokimia Gresik"
-           style="max-height: 90px;">
+           style="max-height: 90px; transform: scale(1.4); transform-origin: left center;">
     </a>
 
     <!-- Navigasi -->
     <nav id="navmenu" class="navmenu me-3">
       <ul>
         <li><a href="#hero" class="active">Beranda</a></li>
-        <li><a href="#about">Tentang Kami</a></li>
-        <li><a href="#services">Layanan dan Pemasaran</a></li>
-        <li><a href="#portfolio">Produk</a></li>
-        <li><a href="#testimonials">Direksi</a></li>
-        <li><a href="#team">Struktur Organisasi</a></li>
-        <li><a href="#berita">Berita</a></li>
-        <li><a href="#contact">Kontak Kami</a></li>
+<li><a href="#about">Tentang Kami</a></li>
+<li><a href="#berita">Berita</a></li>
+<li><a href="#services">Layanan dan Pemasaran</a></li>
+<li><a href="#portfolio">Produk</a></li>
+<li><a href="#testimonials">Direksi</a></li>
+<li><a href="#team">Struktur Organisasi</a></li>
+<li><a href="#contact">Kontak Kami</a></li>
       </ul>
 
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -240,7 +240,7 @@
             
             <ul class="list-unstyled mt-4">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <span>Mendukung pencapaian swasembada pangan nasional dengan produk pupuk berbasis riset dan formulasi terpadu.</span></li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <span>Menerapkan prinsip <i>Green Industry</i> dan manufaktur ramah lingkungan pada seluruh fasilitas produksi.</span></li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <span>Menerapkan prinsip <i style="color: black;">Green Industry</i> dan manufaktur ramah lingkungan pada seluruh fasilitas produksi.</span></li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <span>Mengoperasikan puluhan pabrik modern berbasis otomatisasi untuk menjamin ketersediaan pupuk dan bahan kimia berkualitas tinggi.</span></li>
             </ul>
 
@@ -1239,9 +1239,22 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Main JS File -->
+    <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Agar hanya satu layanan yang terbuka -->
+  <script>
+    document.querySelectorAll('.layanan-card').forEach((card) => {
+      card.addEventListener('toggle', function () {
+        if (this.open) {
+          document.querySelectorAll('.layanan-card').forEach((otherCard) => {
+            if (otherCard !== this) {
+              otherCard.open = false;
+            }
+          });
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
